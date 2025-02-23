@@ -3,139 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form demo</title>
-    <style>
-        .table{
-            border: solid black;
-            border-collapse: collapse;
-            font-size: large;
-        }
-        #cent{
-            text-align: center;
-        }
-        #tab{
-            margin-left: 350px;
-        }
-        #Comments{
-            overflow-x:scroll;
-            overflow-y:scroll;
-        }
-        #select{
-            overflow-y:scroll;
-        }
-    </style>
+    <title>Forms</title>
 </head>
 <body>
-    <font color="blue">
-        <h1 id="cent">Admission Enquiry Form</h1>
-    </font>
-    <hr>
-    <table class="table" border="1px" width="50%" cellspacing="5px" id="tab">
-        <tr>
-            <td>
-                <label for="name">Name</label>
-            </td>
-            <td>
-                <input type="text" name="input" id="input" >
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="Address">Address</label>
-            </td>
-            <td>
-                <input type="text" name="Address" id="Address" placeholder="Nashik">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="number">Mobile Number</label>
-            </td>
-            <td>
-                <input type="number" name="number" id="number">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="date">DOB</label>
-            </td>
-            <td>
-                <input type="date" name="date" id="date">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="email">Email-id</label>
-            </td>
-            <td>
-                <input type="email" name="email" id="email">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="gender">Gender</label>
-            </td>
-            <td>
-                <input type="radio" name="radioButton" value="Male">
-                <label for="Male">Male</label>
-                
-                <input type="radio" name="radioButton" value="Female">
-                <label for="Female">Female</label>
-                
-                <input type="radio" name="radioButton" value="Other">
-                <label for="Other">Other</label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="hobbies">Hobbies</label>
-            </td>
-            <td>
-                <input type="radio" name="radioButton" value="Programming">
-                <label for="Programming">Programming</label><br>
-                
-                <input type="radio" name="radioButton" value="Construction">
-                <label for="Construction">Construction</label><br>
-                
-                <input type="radio" name="radioButton" value="Designing">
-                <label for="Designing">Designing</label><br>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="branch">Select Branch</label>
-            </td>
-            <td>
-                <select>
-                    <option value="computer">Computer</option>
-                    <option value="computer">Civil</option>
-                    <option value="computer">E & Tc</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="rate">Rate this Site</label>
-            </td>
-            <td>
-                <input type="number" name="rate" id="rate" placeholder="5" size="5" min="0">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="Comments">Comments</label>
-            </td>
-            <td>
-                <textarea name="Comments" id="Comments" placeholder="Give your comments here" rows="3" cols="50"></textarea>
-            </td>
-        </tr>
-        <tr id="cent">
-            <td colspan="2">
-                <input type="button" name="submit" id="submit" value="Submit">
-                <input type="button" name="submit" id="submit" value="Reset">
-            </td>
+    <h1>FORM</h1>
+    <form>
+        <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Enter name" required>
+        </div>
+
+        <div>
+            <label for="phone">Phone</label>
+            <input id="phone" type="phone" placeholder="Enter phone no." required>
+        </div>
+
+        <div>
+            <label for="Email">Email</label>
+            <input id="Email" type="email" placeholder="mail">
+        </div>
+
+        <div>
+            <label for="Password">Password</label>
+            <input id="Password" type="password" placeholder="password">
+        </div>
+
+        <div>
+            <label for="Date">Date</label>
+            <input id="Date" type="date" placeholder="yyyy-mm-dd">
+        </div>
+
+        <div>
+            <label for="Gender">Gender</label>
+            <select id="Gender">
+                <option value="" disabled selected>Select Ling</option>
+                <!-- <option value="mard">Mard</option> -->
+                <option value="janani">Janani</option>
+                <option value="namard">Namard</option>
+                <option value="kinner">Kinner</option>
+                <option value="hizzadchut">Hizzadchut</option>
+                <option value="hizzadlund">Hizzadlund</option>
+            </select>
+        </div>
+
+        <div>
+            <p>Subscription plan</p>
+
+            <input id="basic" type="radio" name="subscription" value="basic">
+            <label for="basic">Basic</label>
             
-        </tr>
-    </table>
+            <input id="premium" type="radio" name="subscription" value="premium">
+            <label for="premium">Premium</label>
+
+            <input id="vip" type="radio" name="subscription" value="vip">
+            <label for="vip">VIP</label>
+        </div>
+
+        <div>
+            <input id="terms" type="checkbox">
+            <label for="terms">I agree to the terms and condition</label>
+        </div>
+
+        <div>
+            <label for="comments">Comments</label>
+            <textarea id="comments" placeholder="Add your comments" rows="4"></textarea>
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
 </body>
 </html>
