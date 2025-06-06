@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calendar</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+    }
+
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #999;
+      padding: 8px;
+      width: 40px;
+      height: 40px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <label for="month">Month:</label>
+  <select id="month">
+    <option value="0">January</option>
+    <option value="1">February</option>
+    <option value="2">March</option>
+    <option value="3">April</option>
+    <option value="4">May</option>
+    <option value="5">June</option>
+    <option value="6">July</option>
+    <option value="7">August</option>
+    <option value="8">September</option>
+    <option value="9">October</option>
+    <option value="10">November</option>
+    <option value="11">December</option>
+  </select>
+
+
+  <label for="year">Year:</label>
+  <select id="year">
+    <script>
+        for(let y=2000;y<=2050;y++){
+            document.write(`<option id=${y}>${y}</option>`);
+        }
+    </script>
+  </select>
+
+  <button onclick="generateCalendar()">Generate Calendar</button>
+
+  <div id="calendar"></div>
+
+  <script>
+    const monthNames = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+
+
+    function generateCalendar() {
+      const month = parseInt(document.getElementById("month").value);
+      const year = parseInt(document.getElementById("year").value);
+
+      const firstDay = new Date(year, month, 1).getDay();
+
+      const totalDays = new Date(year, month + 1, 0).getDate();
+
+      let table = "<h3>" + monthNames[month] + " " + year + "</h3>";
+      table += "<table>";
+      table += `<tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>`;
+
+      for (let i = 0; i < firstDay; i++) {
+        table += `<td></td>`;
+      }
+
+      for (let day = 1; day <= totalDays; day++) {
+        table += "<td>" + day + "</td>";
+        if ((firstDay + day) % 7 === 0) {
+          table += "</tr><tr>";
+        }
+      }
+
+      table += "</tr></table>";
+
+      document.getElementById("calendar").innerHTML = table;
+    }
+  </script>
+
+</body>
+</html>

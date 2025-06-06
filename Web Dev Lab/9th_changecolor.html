@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Color changing page!!</h1>
+        <button onclick="changeColor()">Click</button>
+
+        <script>
+            const color=["lightblue", "lightgreen", "lightcoral", "lightyellow", "lavender", "peachpuff"];
+            let i=0;
+
+            function changeColor(){
+                document.body.style.backgroundColor=color[i];
+                i=(i+1)%color.length;
+            }
+        </script>
+    </body>
+</html>

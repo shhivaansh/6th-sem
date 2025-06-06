@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Admission Enquiry Form</h1>
+    <form>
+        <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="enter name">
+        </div>
+
+        <div>
+            <label for="address">Address</label>
+            <input id="address" type="text" placeholder="address">
+        </div>
+
+        <div>
+            <label for="mobile">Phone</label>
+            <input id="mobile" type="phone" placeholder="phone no.">
+        </div>
+
+        <div>
+            <label for="dob">DOB</label>
+            <input id="dob" type="date">
+        </div>
+
+        <div>
+            <label for="gender">Gender</label>
+            <select id="gender">
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div>
+            <input id="hobbies" type="checkbox">
+            <label for="programming">Programming</label>
+            <input id="hobbies" type="checkbox">
+            <label for="construction">Construction</label>
+            <input id="hobbies" type="checkbox">
+            <label for="designing">Designing</label>
+        </div>
+
+        <div>
+            <p>Select Branch</p>
+            <input id="cse" type="radio" name="branch" value="cse">
+            <label for="cse">CSE</label>
+
+            <input id="civil" type="radio" name="branch" value="civil">
+            <label for="civil">Civil</label>
+
+            <input id="ece" type="radio" name="branch" value="radio">
+            <label for="ece">ECE</label>
+        </div>
+
+        <div>
+            <label for="rating">Rate this site</label>
+            <input id="rating" type="number">
+        </div>
+
+        <div>
+            <label for="comment">Comments</label>
+            <textarea id="comment" placeholder="add your comments" rows="3"></textarea>
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+console.log(str.length)
+str.charAt(idx);
+str.toUpperCase();
+str.toLowerCase();
+str.trim();//white spaces removes by both ends
+str.slice(start idx, end idx);
+str.substring(start idx, end idx);
+str.replace(searchVal, targetVal);
+str.replaceAll(searchVal,targetVal);
+str.split(" ");
+str1.concat(" ", str2, str3);
+str.include("substring");
+str.startsWith("startstring");
+str.endsWith("endstring");

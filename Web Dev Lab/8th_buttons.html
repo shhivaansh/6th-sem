@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object Methods</title>
+</head>
+<body>
+
+    <h2>Demonstration of Window Object Methods</h2>
+
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="askName()">Prompt Box</button>
+    <button onclick="confirmAction()">Confirm Box</button>
+    <button onclick="openNewWindow()">Open New Window</button>
+    <button onclick="closeNewWindow()">Close New Window</button>
+    <button onclick="printPage()">Print Page</button>
+
+    <script>
+        function showAlert(){
+            alert("This is the alert box!");
+        }
+
+        function askName(){
+            let name=prompt("what is your name?");
+            if(name){
+                alert("Hello"+name);
+            }
+        }
+
+        function confirmAction(){
+            let confirmBox=confirm("Do you confirm");
+            if(confirmBox){
+                alert("You clicked OK");
+            }else{
+                alert("You clicked cancel");
+            }
+        }
+
+        let newWindow;
+
+        function openNewWindow(){
+            newWindow=window.open("google.com");
+        }
+
+        function closeNewWindow(){
+            if(newWindow){
+                newWindow.close();
+            }else{
+                alert("No window is open");
+            }
+        }
+
+        function printPage(){
+            window.print();
+        }
+    </script>
+
+</body>
+</html>
